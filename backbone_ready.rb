@@ -135,12 +135,10 @@ say_recipe 'Backbone'
 config = {}
 @configs[@current_recipe] = config
 
-gem "bourbon"
-
 after_bundler do
 
   inside "app/assets" do
-    run "templates"
+    empty_directory "templates"
   end
 
   inside "app/assets/javascripts" do
@@ -222,8 +220,13 @@ config = {}
 gem_group :assets do
   gem 'haml-rails'
   gem 'eco'
+  gem 'bourbon'
 end
 
+gem_group :development do
+  gem 'quiet_assets'
+  gem 'sextant'
+end
 
 
 
