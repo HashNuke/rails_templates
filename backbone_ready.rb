@@ -52,7 +52,7 @@ say_recipe 'Devise'
 
 config = {}
 config['use'] = yes_wizard?("Do you want devise?")
-config['user_model'] = yes_wizard?("Do you want a devise User model?")
+config['user_model'] = yes_wizard?("Do you want a devise User model?") if config['use']
 
 @configs[@current_recipe] = config
 
