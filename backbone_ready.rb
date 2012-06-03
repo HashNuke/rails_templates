@@ -150,12 +150,14 @@ after_bundler do
     empty_directory "collections"
     empty_directory "routers"
     empty_directory "helpers"
+    empty_directory "views"
 
     create_file "models/.gitkeep"
     create_file "controllers/.gitkeep"
     create_file "collections/.gitkeep"
     create_file "routers/.gitkeep"
     create_file "helpers/.gitkeep"
+    create_file "views/.gitkeep"
     create_file "events.js.coffee" do
       "class App.e extends Backbone.Events"
     end
