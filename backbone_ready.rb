@@ -139,6 +139,7 @@ after_bundler do
 
   inside "app/assets" do
     empty_directory "templates"
+    create_file "templates/.gitkeep"
   end
 
   inside "app/assets/javascripts" do
